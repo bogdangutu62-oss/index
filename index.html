@@ -2,10 +2,122 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon site</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #993C1D;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; color: #F0997B; }
+
+    nav {
+      background: #7A2E13;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem;
+    }
+    nav a {
+      color: #FAECE7;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    nav a:hover { color: white; text-decoration: underline; }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+    }
+    .card h2 {
+      color: #993C1D;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .card p { line-height: 1.7; color: #444; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #993C1D;
+      color: #F0997B;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site !</h1>
-  <p>Bonjour le monde.</p>
+
+  <header>
+    <h1>Mon site web</h1>
+    <p>Bienvenue sur ma page personnelle</p>
+  </header>
+
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <div class="card" id="apropos">
+      <h2>À propos</h2>
+      <p>Bonjour ! Je m'appelle <strong>Bogdan</strong>. Passionné de technologie et de création web, j'ai créé ce site pour partager mes projets et me présenter en ligne.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card" id="projets">
+        <h2>Projet 1</h2>
+        <p>Description de ton premier projet. Ce que tu as fait, les outils utilisés, etc.</p>
+      </div>
+      <div class="card">
+        <h2>Projet 2</h2>
+        <p>Description de ton deuxième projet. Modifie ce texte avec tes vraies réalisations.</p>
+      </div>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Contact</h2>
+      <p>Tu peux me contacter par email : <a href="mailto:ton.email@gmail.com" style="color:#993C1D;">ton.email@gmail.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Mon site — Créé avec GitHub Pages
+  </footer>
+
 </body>
 </html>
